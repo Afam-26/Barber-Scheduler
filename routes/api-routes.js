@@ -46,8 +46,17 @@ module.exports = function(app) {
       // Sending back a password, even a hashed password, isn't a good idea
       res.json({
         email: req.user.email,
-        id: req.user.id
+        id: req.user.id,
       });
     }
   });
+  // VIEW MY APPOINTMENTS
+  //GET make route so user can see appointments they have made based on their id
+
+  // VIEW AVAILABLE
+  //GET make route for when a user wants to book an appointment. This route will get all appointments and remove those from the variable times on a calender
+
+  // MAKE APPOINTMENT
+  //POST route that'll takes user appointment data. Store with userID
+
 };
