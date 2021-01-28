@@ -1,4 +1,25 @@
 form.signup,
 form.login {
-  margin-top: 50px;
+  margin-top: 10%;
+}
+
+.mb-auto {
+  margin: 3px;
+  background-color: white;
+}
+
+.hero {
+  position: relative;
+}
+
+.login {
+  position: absolute;
+  background-color: white;
+  width: 300px;
+  padding: 20px;
+}
+
+#hero-image {
+  margin-left: 5%;
+  margin-top: 5%;
 }
