@@ -18,6 +18,7 @@ $(document).ready(() => {
       lastName: lastNameInput.val().trim(),
       phoneNumber: phoneNumberInput.val().trim()
     };
+    
 
     if (!userData.email || !userData.password) {
       return;
