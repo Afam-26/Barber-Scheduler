@@ -6,7 +6,7 @@ $(document).ready(() => {
   $.get("/api/user_data").then(data => {
     console.log(data);
     userID = data.id;
-    $(".member-name").text(data.email);
+    $(".member-name").text(data.firstName);
   });
 
   //GET Make request for user appointments (use var userID)
