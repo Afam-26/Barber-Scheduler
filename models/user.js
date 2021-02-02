@@ -47,5 +47,10 @@ module.exports = function(sequelize, DataTypes) {
       null
     );
   });
+
+  User.associate = function (models) {
+    models.User.hasMany(models.Appointment);
+  }
+
   return User;
 };
