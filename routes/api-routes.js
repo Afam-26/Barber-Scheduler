@@ -68,14 +68,19 @@ module.exports = function(app) {
   // VIEW AVAILABLE
   //GET make route for when a user wants to book an appointment. This route will get all appointments and remove those from the variable times on a calender
   app.get("/api/available_appointments", (req, res) => {
-    if (!req.user) {
-      // The user is not logged in, send back an empty object
-      return res.json({});
-    }
+
+    db.Appointment.findAll({
+  
+    }).then(function(dbAppointment) {
+      res.json(dbAppointment);
+    });
+  });
+
+  app.get("/api/appointments/user/:id", (req, res) => {
 
     db.Appointment.findAll({
       where: {
-        UserId: null
+        UserId: req.params.id
       }
     }).then(function(dbAppointment) {
       res.json(dbAppointment);
