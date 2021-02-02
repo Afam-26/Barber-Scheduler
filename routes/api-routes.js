@@ -53,7 +53,7 @@ module.exports = function(app) {
         lastName: req.user.lastName,
         phoneNumber: req.user.phoneNumber,
         email: req.user.email,
-        id: req.user.id,
+        id: req.user.id
       });
     }
   });
@@ -65,5 +65,4 @@ module.exports = function(app) {
 
   // MAKE APPOINTMENT
   //POST route that'll takes user appointment data. Store with userID
-
 };
