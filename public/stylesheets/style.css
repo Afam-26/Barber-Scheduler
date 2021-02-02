@@ -20,6 +20,10 @@ form.login {
   background-image: url("../assets/pexels-edward-eyer-667986.jpg");
 }
 
+.members-body {
+  background-image: url("../assets/pexels-igor-starkov-785537.jpg");
+}
+
 .login {
   background-color: white;
   width: 300px;
