@@ -3,23 +3,37 @@ form.login {
   margin-top: 10%;
 }
 
+.navbar {
+  background-color: #ebead9;
+}
+
 .mb-auto {
   margin: 3px;
   background-color: white;
 }
 
-.hero {
-  position: relative;
+.login-body {
+  background-image: url("../assets/pexels-thgusstavo-santana-1813272.jpg");
+}
+
+.about-body {
+  background-image: url("../assets/pexels-edward-eyer-667986.jpg");
 }
 
 .login {
-  position: absolute;
   background-color: white;
   width: 300px;
   padding: 20px;
 }
 
-#hero-image {
-  margin-left: 5%;
-  margin-top: 5%;
+.hero {
+  background-color: #ebead9;
+}
+
+.login {
+  background-color: #ebead9;
+}
+
+.btn {
+  background-color: #0c2141;
 }
