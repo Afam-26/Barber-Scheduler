@@ -21,6 +21,24 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../public/login.html"));
   });
 
+  // app.get("/logout", (req, res) => {
+  //   // If the user already has an account send them to the members page
+  //   if (req.user) {
+  //     res.redirect("/members");
+  //   }
+  //   res.sendFile(path.join(__dirname, "../public/login.html"));
+  // });
+
+  // app.get('/logout', function(req, res, next) {
+  //   // remove the req.user property and clear the login session
+  //   req.logout();
+  //   // destroy session data
+  //   req.session = null;
+  //   // redirect to homepage
+  //   res.redirect('/');
+  // });
+
+
   app.get("/signup", (req, res) => {
     // If the user already has an account send them to the members page
     if (req.user) {

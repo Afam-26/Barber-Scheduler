@@ -19,6 +19,16 @@ $(document).ready(() => {
     console.log(data);
   });
 
+  $(".logout").click(function() {      
+
+    $.get("/logout", (req, res) => {
+    
+      window.location.href = "/";
+      
+    });
+
+    
+  });
 
   $(".appointments-button").click(function() {
     $.get(`/api/appointments/user/${userID}`).then(data => {
