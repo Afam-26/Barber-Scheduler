@@ -22,14 +22,11 @@
       <a href="/" class="navbar-brand mx-auto d-block text-center order-0 order-md-1 w-25 text-dark">Barber Booker</a>
         <div class="navbar-collapse collapse dual-nav w-50 order-2">
           <ul class="navbar-nav mx-auto">
-            <li class="nav-item active">
-              <a class="nav-link pl-0 text-dark" href="/members">Home</a>
-            </li>
             <li class="nav-item">
               <a class="nav-link text-dark" href="/about">About</a>
             </li>
             <li class="nav-item">
-              <button class="nav-link btn btn-dark" href="/signup">Signup</button>
+              <button href="#" class="nav-link btn btn-dark f90-logout-button">Log Out</button>
             </li>
           </ul>
         </div>
@@ -37,23 +34,26 @@
     </nav>
     <div class="container">
     <div class="row">
-      <div class="card col-md-6 col-lg-8 col-md-offset-3 text-center position-absolute top-50 start-50 translate-middle">
+      <div class="card col-sm-6 col-md-6 col-lg-6 col-md-offset-3 text-center position-absolute top-50 start-50 translate-middle">
         <h2>Book Here<span class="about-us"></span></h2>
         <div class="card-body text-center">
           <ul class="list-group list-group-flush">
-            <li class="list-group-item">9:00 AM</li>
-            <li class="list-group-item">10:00 AM</li>
-            <li class="list-group-item">11:00 AM</li>
-            <li class="list-group-item">12:00 PM</li>
-            <li class="list-group-item">01:00 PM</li>
-            <li class="list-group-item">02:00 PM</li>
-            <li class="list-group-item">03:00 PM</li>
+            <button type="button" id="9am" class="btn btn-outline-dark btn-log btn-block">9:00 AM</button>
+            <button type="button" id="10am" class="btn btn-outline-dark btn-log btn-block">10:00 AM</button>
+            <button type="button" id="11am" class="btn btn-outline-dark btn-log btn-block">11:00 AM</button>
+            <button type="button" id="12pm" class="btn btn-outline-dark btn-log btn-block">12:00 AM</button>
+            <button type="button" id="1pm" class="btn btn-outline-dark btn-log btn-block">1:00 PM</button>
+            <button type="button" id="2pm" class="btn btn-outline-dark btn-log btn-block">2:00 PM</button>
+            <button type="button" id="3pm" class="btn btn-outline-dark btn-log btn-block">3:00 PM</button>
+            <button type="button" id="4pm" class="btn btn-outline-dark btn-log btn-block">4:00 PM</button>
+            <button type="button" id="5pm" class="btn btn-outline-dark btn-log btn-block">5:00 PM</button>
           </ul>
         </div>
-      </div>
-      <div>
-        <button class="appointments-button">View All Appointments</button>
-        <ul class="view-appointments"></ul>
+        <br/>
+        <div class="card-body text-center">
+          <button type="button" class="appointments-button btn btn-outline-dark btn-log btn-block">View All Appointments</button>
+          <ul class="view-appointments"></ul>
+        </div>
       </div>
       
     </div>
