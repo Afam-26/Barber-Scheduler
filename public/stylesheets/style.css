@@ -38,11 +38,13 @@ form.login {
   background-color: #ebead9;
 }
 
+
 .container {
   padding-top: 10%;
-  opacity: 90%;
 }
 
-.card-body {
-  opacity: 100%;
+
+#9am{
+  display: none;
 }
+

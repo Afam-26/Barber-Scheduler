@@ -54,7 +54,8 @@ module.exports = function(app) {
     // Sending back a password, even a hashed password, isn't a good idea
     db.User.findOne({
       where: {
-        id: req.user.id
+        id: req.user.id,
+        apptID: req.appointment.id
       },
       include: [db.Appointment],
       attributes: {
@@ -103,4 +104,21 @@ module.exports = function(app) {
       res.json(dbAppointment);
     });
   });
+
+  app.post("/api/appointments/add", (req, res) => {
+    console.log(req.body);
+
+    db.Appointment.create({UserId: req.user.id, appointmentDate: req.body.appointmentDate}, {
+      where: {
+        id: req.params.appointmentId
+      }
+
+    }).then(function(dbAppointment) {
+      res.json(dbAppointment);
+    });
+    
+
+      
+  });
 };
+
