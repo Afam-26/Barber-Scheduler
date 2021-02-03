@@ -31,8 +31,32 @@ $(document).ready(() => {
   // PUT Make new appointment by user (send appoointID to backend and backend assign appointment timeslot for user)
   const appointmentId = 4; // TODO, you have to get the AppointmentID. This will be one of the available appointments.
 
-  // $.ajax({ url: `/api/appointments/${appointmentId}`, type: "PUT" }).then(data => {
+  // $.ajax({ url: `/api/appointments/add`, type: "POST" }).then(data => {
   //     console.log("view all available appointments");
   //     console.log(data);
   //   });
+
+    $(".make-appointment").click(function() {
+      var time = "11:35";
+      var userNumber = userID;
+
+      $.post("/api/appointments/add", {
+        appointmentDate: time,
+        UserID: userNumber
+      })
+        .then(() => {
+          console.log("Works");
+        })
+
+      // $.ajax("/api/appointments/add", {
+      //   type: "POST",
+      //   data: newAppt
+      // }).then(
+      //   function() {
+      //     console.log("Created new appointment");
+      //   }
+      // );
+    });
 });
+
+

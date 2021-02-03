@@ -103,13 +103,27 @@ module.exports = function(app) {
       res.json(dbAppointment);
     });
   });
+
+  app.post("/api/appointments/add", (req, res) => {
+    console.log(req.body);
+
+    db.Appointment.create({UserId: req.user.id, appointmentDate: req.body.appointmentDate}, {
+      where: {
+        id: req.params.appointmentId
+      }, 
+      appointmentDate: req.body.appointmentDate,
+      UserId: req.body.UserId
+
+    }).then(function(dbAppointment) {
+      res.json(dbAppointment);
+    });
+    // db.Appointment.create({
+    //   appointmentDate: req.body.appointmentDate,
+    //   UserId: req.body.User
+    // })
+      
+
+      
+  });
 };
 
-app.post("/api/appointments/add", (req, res) => {
-  console.log(req.body);
-  db.Appointment.create({
-    appointmentDate: req.body.appointmentDate,
-    
-  })
-    
-});
