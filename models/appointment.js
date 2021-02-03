@@ -4,8 +4,8 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.STRING,
     },
 
-    appointmentDay: {
-      type: DataTypes.STRING
+    Cancelled: {
+      type: DataTypes.BOOLEAN
     }
   });
 
