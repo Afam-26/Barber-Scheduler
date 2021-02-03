@@ -25,6 +25,7 @@ $(document).ready(() => {
     
       for(var i = 0; i < data.length; i++){
         $(".view-appointments").append('<li>' + data[i].appointmentDate + '</li>');
+        console.log(data[i].appointmentDate)
       }
       
       });
