@@ -3,6 +3,10 @@ module.exports = function(sequelize, DataTypes) {
     appointmentDate: {
       type: DataTypes.STRING,
     },
+
+    appointmentDay: {
+      type: DataTypes.STRING
+    }
   });
 
   Appointment.associate = function (models) {
