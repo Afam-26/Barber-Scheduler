@@ -1,7 +1,7 @@
 module.exports = function(sequelize, DataTypes) {
   const Appointment = sequelize.define("Appointment", {
     appointmentDate: {
-      type: DataTypes.DATE,
+      type: DataTypes.STRING,
     },
   });
 
