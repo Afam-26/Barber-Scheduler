@@ -23,8 +23,8 @@ $(document).ready(() => {
 
   $(".appointments-button").click(function() {
     $.get(`/api/appointments/user/${userID}`).then(data => {
-      console.log(data.appointmentDate);
-      // $(".view-appointments").text(data.appointmentDate)
+      
+      $(".view-appointments").text(data[0].appointmentDate)
       
     });
   });
