@@ -54,7 +54,8 @@ module.exports = function(app) {
     // Sending back a password, even a hashed password, isn't a good idea
     db.User.findOne({
       where: {
-        id: req.user.id
+        id: req.user.id,
+        apptID: req.appointment.id
       },
       include: [db.Appointment],
       attributes: {

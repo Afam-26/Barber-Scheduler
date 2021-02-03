@@ -38,6 +38,12 @@ form.login {
   background-color: #ebead9;
 }
 
+
+.container {
+  padding-top: 10%;
+}
+
+
 #9am{
   display: none;
 }
