@@ -17,16 +17,15 @@ $(document).ready(() => {
     console.log(data);
   });
 
-  // $.get(`/api/appointments/user/${userID}`).then(data => {
-  //   $(".view-appointments").text(data.appointmentDate)
-  // });
 
   $(".appointments-button").click(function() {
     $.get(`/api/appointments/user/${userID}`).then(data => {
-      console.log(data.appointmentDate);
-      // $(".view-appointments").text(data.appointmentDate)
+    
+      for(var i = 0; i < data.length; i++){
+        $(".view-appointments").append('<li>' + data[i].appointmentDate + '</li>');
+      }
       
-    });
+      });
   });
 
   // PUT Make new appointment by user (send appoointID to backend and backend assign appointment timeslot for user)
