@@ -28,13 +28,6 @@ $(document).ready(() => {
       });
   });
 
-  // PUT Make new appointment by user (send appoointID to backend and backend assign appointment timeslot for user)
-  const appointmentId = 4; // TODO, you have to get the AppointmentID. This will be one of the available appointments.
-
-  // $.ajax({ url: `/api/appointments/add`, type: "POST" }).then(data => {
-  //     console.log("view all available appointments");
-  //     console.log(data);
-  //   });
 
     $(".make-appointment").click(function() {
       var time = "11:35";
@@ -48,14 +41,215 @@ $(document).ready(() => {
           console.log("Works");
         })
 
-      // $.ajax("/api/appointments/add", {
-      //   type: "POST",
-      //   data: newAppt
-      // }).then(
-      //   function() {
-      //     console.log("Created new appointment");
-      //   }
-      // );
+    });
+
+    $("#Nine").click(function() {
+      var time = document.getElementById("Nine").textContent
+      var userNumber = userID;
+      var x = document.getElementById("Ten");
+      $("#Nine").css('background', 'green');
+      $("#Ten").css('display', 'none');
+      $("#Eleven").css('display', 'none');
+      $("#Twelve").css('display', 'none');
+      $("#One").css('display', 'none');
+      $("#Two").css('display', 'none');
+      $("#Three").css('display', 'none');
+      $("#Four").css('display', 'none');
+      $("#Five").css('display', 'none');
+
+      $.post("/api/appointments/add", {
+        appointmentDate: time,
+        UserID: userNumber
+      })
+        .then(() => {
+          console.log("Works");
+        })
+
+    });
+
+    $("#Ten").click(function() {
+      var time = document.getElementById("Ten").textContent
+      var userNumber = userID;
+      $("#Ten").css('background', 'green');
+      $("#Nine").css('display', 'none');
+      $("#Eleven").css('display', 'none');
+      $("#Twelve").css('display', 'none');
+      $("#One").css('display', 'none');
+      $("#Two").css('display', 'none');
+      $("#Three").css('display', 'none');
+      $("#Four").css('display', 'none');
+      $("#Five").css('display', 'none');
+
+      $.post("/api/appointments/add", {
+        appointmentDate: time,
+        UserID: userNumber
+      })
+        .then(() => {
+          console.log("Works");
+        })
+
+    });
+
+    $("#Eleven").click(function() {
+      var time = document.getElementById("Eleven").textContent
+      var userNumber = userID;
+      $("#Eleven").css('background', 'green');
+      $("#Nine").css('display', 'none');
+      $("#Ten").css('display', 'none');
+      $("#Twelve").css('display', 'none');
+      $("#One").css('display', 'none');
+      $("#Two").css('display', 'none');
+      $("#Three").css('display', 'none');
+      $("#Four").css('display', 'none');
+      $("#Five").css('display', 'none');
+
+      $.post("/api/appointments/add", {
+        appointmentDate: time,
+        UserID: userNumber
+      })
+        .then(() => {
+          console.log("Works");
+        })
+
+    });
+
+    $("#Twelve").click(function() {
+      var time = document.getElementById("Twelve").textContent
+      var userNumber = userID;
+      $("#Twelve").css('background', 'green');
+      $("#Nine").css('display', 'none');
+      $("#Ten").css('display', 'none');
+      $("#Eleven").css('display', 'none');
+      $("#One").css('display', 'none');
+      $("#Two").css('display', 'none');
+      $("#Three").css('display', 'none');
+      $("#Four").css('display', 'none');
+      $("#Five").css('display', 'none');
+
+      $.post("/api/appointments/add", {
+        appointmentDate: time,
+        UserID: userNumber
+      })
+        .then(() => {
+          console.log("Works");
+        })
+
+    });
+
+    $("#One").click(function() {
+      var time = document.getElementById("One").textContent
+      var userNumber = userID;
+      $("#One").css('background', 'green');
+      $("#Nine").css('display', 'none');
+      $("#Ten").css('display', 'none');
+      $("#Eleven").css('display', 'none');
+      $("#Twelve").css('display', 'none');
+      $("#Two").css('display', 'none');
+      $("#Three").css('display', 'none');
+      $("#Four").css('display', 'none');
+      $("#Five").css('display', 'none');
+
+      $.post("/api/appointments/add", {
+        appointmentDate: time,
+        UserID: userNumber
+      })
+        .then(() => {
+          console.log("Works");
+        })
+
+    });
+
+    $("#Two").click(function() {
+      var time = document.getElementById("Two").textContent
+      var userNumber = userID;
+      $("#Two").css('background', 'green');
+      $("#Nine").css('display', 'none');
+      $("#Ten").css('display', 'none');
+      $("#Eleven").css('display', 'none');
+      $("#Twelve").css('display', 'none');
+      $("#One").css('display', 'none');
+      $("#Three").css('display', 'none');
+      $("#Four").css('display', 'none');
+      $("#Five").css('display', 'none');
+
+      $.post("/api/appointments/add", {
+        appointmentDate: time,
+        UserID: userNumber
+      })
+        .then(() => {
+          console.log("Works");
+        })
+
+    });
+
+    $("#Three").click(function() {
+      var time = document.getElementById("Three").textContent
+      var userNumber = userID;
+      $("#Three").css('background', 'green');
+      $("#Nine").css('display', 'none');
+      $("#Ten").css('display', 'none');
+      $("#Eleven").css('display', 'none');
+      $("#Twelve").css('display', 'none');
+      $("#One").css('display', 'none');
+      $("#Two").css('display', 'none');
+      $("#Four").css('display', 'none');
+      $("#Five").css('display', 'none');
+      
+
+      $.post("/api/appointments/add", {
+        appointmentDate: time,
+        UserID: userNumber
+      })
+        .then(() => {
+          console.log("Works");
+        })
+
+    });
+
+    $("#Four").click(function() {
+      var time = document.getElementById("Four").textContent
+      var userNumber = userID;
+      $("#Four").css('background', 'green');
+      $("#Nine").css('display', 'none');
+      $("#Ten").css('display', 'none');
+      $("#Eleven").css('display', 'none');
+      $("#Twelve").css('display', 'none');
+      $("#One").css('display', 'none');
+      $("#Two").css('display', 'none');
+      $("#Three").css('display', 'none');
+      $("#Five").css('display', 'none');
+
+      $.post("/api/appointments/add", {
+        appointmentDate: time,
+        UserID: userNumber
+      })
+        .then(() => {
+          console.log("Works");
+        })
+
+    });
+
+    $("#Five").click(function() {
+      var time = document.getElementById("Five").textContent
+      var userNumber = userID;
+      $("#Five").css('background', 'green');
+      $("#Nine").css('display', 'none');
+      $("#Ten").css('display', 'none');
+      $("#Eleven").css('display', 'none');
+      $("#Twelve").css('display', 'none');
+      $("#One").css('display', 'none');
+      $("#Two").css('display', 'none');
+      $("#Three").css('display', 'none');
+      $("#Four").css('display', 'none');
+
+      $.post("/api/appointments/add", {
+        appointmentDate: time,
+        UserID: userNumber
+      })
+        .then(() => {
+          console.log("Works");
+        })
+
     });
 });
 

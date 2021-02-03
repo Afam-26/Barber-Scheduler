@@ -110,18 +110,12 @@ module.exports = function(app) {
     db.Appointment.create({UserId: req.user.id, appointmentDate: req.body.appointmentDate}, {
       where: {
         id: req.params.appointmentId
-      }, 
-      appointmentDate: req.body.appointmentDate,
-      UserId: req.body.UserId
+      }
 
     }).then(function(dbAppointment) {
       res.json(dbAppointment);
     });
-    // db.Appointment.create({
-    //   appointmentDate: req.body.appointmentDate,
-    //   UserId: req.body.User
-    // })
-      
+    
 
       
   });
