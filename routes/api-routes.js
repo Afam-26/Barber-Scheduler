@@ -105,11 +105,11 @@ module.exports = function(app) {
   });
 };
 
-// app.post("/api/appointments/add", (req, res) => {
-//   console.log(req.body);
-//   db.Appointment.create({
-//     appointmentDate: req.body.appointmentDate,
+app.post("/api/appointments/add", (req, res) => {
+  console.log(req.body);
+  db.Appointment.create({
+    appointmentDate: req.body.appointmentDate,
     
-//   })
+  })
     
-// });
+});
