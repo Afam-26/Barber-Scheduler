@@ -55,7 +55,6 @@ module.exports = function(app) {
     db.User.findOne({
       where: {
         id: req.user.id,
-        apptID: req.appointment.id
       },
       include: [db.Appointment],
       attributes: {
